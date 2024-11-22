@@ -1,0 +1,51 @@
+/* 基本スタイル */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+li:hover {
+  background-color: #e6f7ff;
+  color: #007acc;
+  border-color: #007acc;
+}
+
+.hidden {
+  display: none;
+}
+
+/* アイコン */
+li::before {
+  content: '▶';
+  font-size: 12px;
+  margin-right: 5px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+li.open::before {
+  transform: rotate(90deg);
+}
